@@ -31,6 +31,7 @@ pipeline {
                 //sh "docker run -d -p 8000:8000 notes-app:latest"
                 //sh "docker stop $(docker ps -aq)"
                 //sh "docker rmi -f $(docker ps -aq)"
+                // docker down first
                 sh "docker compose down && docker compose up -d"
             }
         }
