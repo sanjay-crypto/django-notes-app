@@ -30,7 +30,7 @@ pipeline {
                 echo "Deploying the code"
                 //sh "docker run -d -p 8000:8000 notes-app:latest"
                 //sh "docker stop $(docker ps -aq)"
-                //sh "docker rm -f $(docker ps -aq)"
+                //sh "docker rmi -f $(docker ps -aq)"
                 sh "docker compose down && docker compose up -d"
             }
         }
